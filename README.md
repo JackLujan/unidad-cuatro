@@ -1,9 +1,9 @@
-# 🎮 GameStore - Tienda de Videojuegos con JWT
+#  GameStore - Tienda de Videojuegos con JWT
 
-## 📋 Descripción
+##  Descripción
 Aplicación web de tienda de videojuegos con sistema de autenticación JWT, login con Google y funcionalidades de compra.
 
-## 🚀 Instalación y Configuración
+##  Instalación y Configuración
 
 ### Opción 1: Instalación Local
 
@@ -64,7 +64,7 @@ docker-compose logs web-app
 curl http://localhost:5500/api/health
 ```
 
-## ⚙️ Configuración del Puerto
+##  Configuración del Puerto
 
 ### Cambiar el puerto del servidor
 Para cambiar el puerto del servidor, edita el archivo `server.js`:
@@ -83,18 +83,18 @@ const config = {
 };
 ```
 
-## 🌐 Puertos por Defecto
+##  Puertos por Defecto
 - **Servidor Backend**: 5500 (configurable via PORT)
 - **Frontend**: Se sirve desde el mismo puerto (5500)
 - **Docker**: Mapeado al puerto 5500 del host
 
-## 🔐 Funcionalidades de Autenticación
+##  Funcionalidades de Autenticación
 - Login con usuario/contraseña (admin/admin123)
 - Login con Google OAuth2
 - Tokens JWT para sesiones
 - Rutas protegidas con middleware de autenticación
 
-## 🛒 Endpoints del Carrito (RA-Unidad III)
+##  Endpoints del Carrito (RA-Unidad III)
 Todos los endpoints requieren autenticación JWT:
 
 | Método | Endpoint | Descripción |
@@ -114,14 +114,14 @@ Todos los endpoints requieren autenticación JWT:
 6. Vaciar carrito (DELETE /api/carrito/clear)
 7. Confirmar carrito vacío
 
-## 🎯 Funcionalidades de la Tienda
+## Funcionalidades de la Tienda
 - Catálogo de videojuegos
 - Sistema de filtros (género, precio, búsqueda)
 - **Sistema completo de carrito de compras con endpoints REST**
 - Procesamiento de compras
 - Perfil de usuario con saldo y historial
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 ```
 JWT-Token/
 ├── config/
@@ -155,7 +155,7 @@ JWT-Token/
 └── package.json
 ```
 
-## 🔧 Comandos Útiles
+## Comandos Útiles
 
 ### Iniciar en modo desarrollo
 ```bash
@@ -165,7 +165,7 @@ npm run dev
 ### Verificar sintaxis
 ```bash
 
-## 🧪 Probar el Sistema de Carrito
+## Probar el Sistema de Carrito
 
 ### Opción 1: Página de Prueba
 1. Inicia el servidor: `npm start`
@@ -200,13 +200,13 @@ node -c server.js
 netstat -an | findstr :5500
 ```
 
-## 📝 Notas Importantes
+## Notas Importantes
 - El servidor debe estar corriendo para que funcione la autenticación
 - Las rutas de la API están protegidas con JWT
 - El login con Google requiere configuración de OAuth2 válida
 - Los datos de usuario son simulados (no hay base de datos real)
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Error de CORS
 Si tienes problemas de CORS, verifica que el servidor esté corriendo en el puerto correcto.
@@ -216,3 +216,4 @@ Verifica que el token JWT esté presente en localStorage y no haya expirado.
 
 ### Puerto ya en uso
 Si el puerto 5500 está ocupado, cambia la configuración en `config/serverConfig.js`.
+
