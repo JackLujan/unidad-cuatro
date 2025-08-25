@@ -1,21 +1,21 @@
-# 🐳 Instrucciones de Contenerización - JWT-Token GameStore
+#  Instrucciones de Contenerización - JWT-Token GameStore
 
-## 📋 Resumen del Proceso Realizado
+##  Resumen del Proceso Realizado
 
-### 1. ✅ Dockerfile Creado
+### 1.  Dockerfile Creado
 - **Ubicación**: `./Dockerfile`
 - **Base**: Node.js 18 Alpine (imagen ligera)
 - **Puerto**: 5500
 - **Comando**: `npm start`
 
-### 2. ✅ Docker Compose Configurado
+### 2.  Docker Compose Configurado
 - **Archivo**: `./docker-compose.yml`
 - **Servicio**: `web-app`
 - **Puerto**: 5500:5500 (host:contenedor)
 - **Variables de entorno**: Configuradas desde archivo .env
 - **Health check**: Endpoint `/api/health`
 
-### 3. ✅ Variables de Entorno Configuradas
+### 3.  Variables de Entorno Configuradas
 - **Archivo**: `./env.example` (copia a `.env`)
 - **Variables principales**:
   - `JWT_SECRET`: Clave secreta para firmar tokens
@@ -23,17 +23,17 @@
   - `PORT`: Puerto del servidor (5500)
   - `NODE_ENV`: Entorno de producción
 
-### 4. ✅ Configuración JWT Actualizada
+### 4.  Configuración JWT Actualizada
 - **Archivo**: `./config/jwtConfig.js`
 - **Cambios**: Ahora usa variables de entorno
 - **Fallback**: Valores por defecto si no hay variables
 
-### 5. ✅ Endpoint de Health Check
+### 5.  Endpoint de Health Check
 - **Ruta**: `GET /api/health`
 - **Propósito**: Verificar estado del contenedor
 - **Respuesta**: Status, timestamp y uptime
 
-## 🚀 Pasos para Ejecutar
+##  Pasos para Ejecutar
 
 ### Paso 1: Preparar Variables de Entorno
 ```bash
@@ -70,24 +70,24 @@ curl http://localhost:5500/api/health
 - **API**: http://localhost:5500/api
 - **Health**: http://localhost:5500/api/health
 
-## 🧪 Pruebas de Funcionamiento
+##  Pruebas de Funcionamiento
 
 ### 1. Pruebas Básicas
-- ✅ Aplicación accesible en navegador
-- ✅ Health check responde correctamente
-- ✅ Contenedor ejecutándose sin errores
+-  Aplicación accesible en navegador
+-  Health check responde correctamente
+-  Contenedor ejecutándose sin errores
 
 ### 2. Pruebas de Autenticación
-- ✅ Login normal (admin/admin123)
-- ✅ Generación de tokens JWT
-- ✅ Login con Google OAuth (requiere configuración)
+-  Login normal (admin/admin123)
+-  Generación de tokens JWT
+-  Login con Google OAuth (requiere configuración)
 
 ### 3. Pruebas de API
-- ✅ Endpoints protegidos con JWT
-- ✅ Carrito de compras funcional
-- ✅ Middleware de autenticación
+-  Endpoints protegidos con JWT
+-  Carrito de compras funcional
+-  Middleware de autenticación
 
-## 🔧 Comandos Docker Útiles
+## Comandos Docker Útiles
 
 ```bash
 # Ver logs
@@ -109,7 +109,7 @@ docker stats
 docker-compose exec web-app sh
 ```
 
-## 📊 Monitoreo y Debugging
+## Monitoreo y Debugging
 
 ### Health Check
 - **Endpoint**: `/api/health`
@@ -122,7 +122,7 @@ docker-compose exec web-app sh
 - **Nivel**: Info, Warn, Error
 - **Persistencia**: Volumen montado en `./logs`
 
-## 🚨 Solución de Problemas
+## Solución de Problemas
 
 ### Error: Puerto 5500 ocupado
 ```bash
@@ -149,7 +149,7 @@ docker-compose logs web-app
 docker-compose exec web-app npm list
 ```
 
-## 📝 Notas Importantes
+##  Notas Importantes
 
 1. **Google OAuth**: Requiere configuración real de `GOOGLE_CLIENT_ID`
 2. **JWT Secret**: Cambiar en producción por seguridad
@@ -157,24 +157,24 @@ docker-compose exec web-app npm list
 4. **Persistencia**: Logs se guardan en volumen `./logs`
 5. **Health Check**: Necesario para orquestación de contenedores
 
-## 🎯 Evidencias de Funcionamiento
+##  Evidencias de Funcionamiento
 
 ### Terminal
-- ✅ `docker-compose up --build` sin errores
-- ✅ Contenedores en estado "Up"
-- ✅ Health check exitoso
+-  `docker-compose up --build` sin errores
+-  Contenedores en estado "Up"
+-  Health check exitoso
 
 ### Navegador
-- ✅ Aplicación accesible en http://localhost:3000
-- ✅ Interfaz de usuario funcional
-- ✅ Login y autenticación funcionando
+-  Aplicación accesible en http://localhost:3000
+-  Interfaz de usuario funcional
+-  Login y autenticación funcionando
 
 ### API
-- ✅ Endpoints respondiendo correctamente
-- ✅ Tokens JWT generándose
-- ✅ Autenticación OAuth configurada
+-  Endpoints respondiendo correctamente
+-  Tokens JWT generándose
+-  Autenticación OAuth configurada
 
-## 🔗 Enlaces Útiles
+##  Enlaces Útiles
 
 - **Docker Hub**: https://hub.docker.com/
 - **Docker Compose**: https://docs.docker.com/compose/
